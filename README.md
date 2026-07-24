@@ -60,24 +60,22 @@ The Audi tenant doesn't report everything the Mojio API defines:
 - **Tire pressure** is absent from the payload, so that binary sensor stays
   `unknown` unless your vehicle reports it.
 
-## Upgrading
+## Troubleshooting
 
-### Odometers showing feet instead of miles (fixed in 1.0.1)
+### An odometer shows feet instead of miles
 
-Versions before 1.0.1 exposed the odometers in meters. Home Assistant maps a
-metres-based distance sensor onto **feet** for US customary users, and only a
-kilometres-based one onto miles.
+Only affects installs made from `master` before the first release, which briefly
+exposed the odometers in meters - Home Assistant maps a metres-based distance
+sensor onto feet for US customary users, and only a kilometres-based one onto
+miles.
 
 Home Assistant pins a sensor's display unit in the entity registry the first
-time it is registered, so **updating alone does not fix an existing entity** -
-it will keep showing feet. For each affected entity (`Odometer` and
-`Distance since install`) either:
+time it is registered, so updating alone will not change an existing entity.
+For each affected entity (`Odometer` and `Distance since install`) either:
 
 - open the entity → gear icon → set **Unit of Measurement** to miles, or
 - delete the entity and reload the integration so it re-registers, or
 - remove and re-add the integration.
-
-New installs are unaffected.
 
 ## Brand images
 
