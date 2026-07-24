@@ -1,8 +1,12 @@
 {
   "domain": "mojio",
   "name": "Mojio",
-  "version": "0.8.1",
-  "documentation": "https://github.com/simontb/mojio-home-assistant",
-  "requirements": ["mojio_sdk==0.6.0"],
-  "codeowners": ["@simontb"]
+  "codeowners": ["@Danimal4326"],
+  "config_flow": true,
+  "documentation": "https://github.com/Danimal4326/mojio-home-assistant",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/Danimal4326/mojio-home-assistant/issues",
+  "requirements": [],
+  "version": "1.0.0"
 }

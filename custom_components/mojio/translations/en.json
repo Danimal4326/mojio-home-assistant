@@ -1,0 +1,79 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Mojio",
+        "description": "Enter your Mojio tenant and account details. For Audi vehicles, use the tenant `audi`.",
+        "data": {
+          "tenant": "Tenant",
+          "username": "Email",
+          "password": "Password",
+          "client_id": "Client ID",
+          "client_secret": "Client secret"
+        },
+        "data_description": {
+          "tenant": "Your vehicle brand's Mojio tenant, for example `audi`.",
+          "client_id": "The OAuth client ID used by your brand's mobile app.",
+          "client_secret": "The OAuth client secret used by your brand's mobile app."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate with Mojio",
+        "description": "The password for {username} is no longer accepted. Enter it again to reconnect.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Mojio.",
+      "invalid_auth": "Invalid credentials.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This Mojio account is already set up.",
+      "reauth_successful": "Re-authentication was successful."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Mojio options",
+        "data": {
+          "scan_interval": "Update interval"
+        },
+        "data_description": {
+          "scan_interval": "How often to poll Mojio for new data."
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "ignition": { "name": "Ignition" },
+      "parked": { "name": "Parked" },
+      "idle": { "name": "Idling" },
+      "tow": { "name": "Tow detected" },
+      "disturbance": { "name": "Disturbance" },
+      "accident": { "name": "Accident detected" },
+      "check_engine": { "name": "Check engine" },
+      "battery_connected": { "name": "Battery connected" },
+      "tire_pressure_warning": { "name": "Tire pressure warning" }
+    },
+    "sensor": {
+      "fuel_level": { "name": "Fuel level" },
+      "battery_voltage": { "name": "Battery voltage" },
+      "speed": { "name": "Speed" },
+      "rpm": { "name": "Engine RPM" },
+      "odometer": { "name": "Odometer" },
+      "virtual_odometer": { "name": "Distance since install" },
+      "engine_oil_temperature": { "name": "Engine oil temperature" },
+      "diagnostic_codes": { "name": "Diagnostic codes" },
+      "vehicle_status": { "name": "Vehicle status" },
+      "last_contact": { "name": "Last contact" },
+      "last_trip_distance": { "name": "Last trip distance" },
+      "last_trip_duration": { "name": "Last trip duration" },
+      "last_trip_start": { "name": "Last trip start" }
+    }
+  }
+}

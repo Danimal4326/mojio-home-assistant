@@ -1,0 +1,180 @@
+{
+  "Data": [
+    {
+      "Id": "00000000-0000-0000-0000-000000000001",
+      "CreatedOn": "2022-03-30T14:01:25.749Z",
+      "LastModified": "2026-07-24T18:20:51.731Z",
+      "Deleted": false,
+      "OwnerId": "00000000-0000-0000-0000-000000000099",
+      "AccidentState": { "Timestamp": "2026-05-09T16:47:55.000Z", "Value": false },
+      "Battery": {
+        "Connected": true,
+        "RiskSeverity": "None",
+        "Timestamp": "2026-07-24T18:20:19.000Z",
+        "Unit": "Volts",
+        "Value": 12.2,
+        "BaseUnit": "Volts",
+        "BaseValue": 12.2
+      },
+      "DiagnosticCodes": [],
+      "DisturbanceState": { "Timestamp": "2026-07-22T21:18:19.000Z", "Value": false },
+      "FuelLevel": {
+        "RiskSeverity": "None",
+        "Timestamp": "2026-07-24T18:15:00.000Z",
+        "Unit": "Percentage",
+        "Value": 38.82,
+        "BaseUnit": "Percentage",
+        "BaseValue": 38.82
+      },
+      "VirtualFuelConsumption": {
+        "Timestamp": "2026-07-24T18:15:09.001Z",
+        "Unit": "Liter",
+        "Value": 214.892,
+        "BaseUnit": "Liter",
+        "BaseValue": 214.892
+      },
+      "GatewayTime": "2026-07-24T18:20:20.314Z",
+      "HarshEventState": {
+        "Timestamp": "2026-07-24T18:20:19.001Z",
+        "Value": false,
+        "Force": {
+          "Timestamp": "2026-07-24T18:20:19.001Z",
+          "Unit": "GUnits",
+          "Value": 0.39,
+          "BaseUnit": "GUnits",
+          "BaseValue": 0.39
+        }
+      },
+      "Heading": {
+        "Direction": "South East",
+        "LeftTurn": true,
+        "CalculatedValue": 140.40599941076903,
+        "Timestamp": "2026-07-24T18:20:19.000Z",
+        "Unit": "Degree",
+        "Value": 144.0,
+        "BaseUnit": "Degree",
+        "BaseValue": 144.0
+      },
+      "IdleState": {
+        "Timestamp": "2026-07-24T01:05:26.000Z",
+        "Value": false,
+        "StartTime": "2026-07-24T00:51:59.000Z"
+      },
+      "IgnitionState": { "Timestamp": "2026-07-24T18:15:09.000Z", "Value": false },
+      "LastContactTime": "2026-07-24T18:20:19.001Z",
+      "LicensePlate": "TEST 001",
+      "DetectedVIN": "WA1AAAAA0AA000001",
+      "MilStatus": false,
+      "MojioId": "00000000-0000-0000-0000-000000000002",
+      "WithinGeofences": [],
+      "Name": "Audi Q7",
+      "Odometer": {
+        "RolloverValue": 4294967295.0,
+        "Timestamp": "2026-06-14T00:31:08.000Z",
+        "Unit": "Meters",
+        "Value": 100737000.0,
+        "BaseUnit": "Meters",
+        "BaseValue": 100737000.0
+      },
+      "ParkedState": { "Timestamp": "2026-07-24T18:15:09.000Z", "Value": true },
+      "RPM": {
+        "Timestamp": "2026-07-24T18:15:14.121Z",
+        "Unit": "RevolutionsPerMinute",
+        "Value": 0.0,
+        "BaseUnit": "RevolutionsPerMinute",
+        "BaseValue": 0.0
+      },
+      "Speed": {
+        "Timestamp": "2026-07-24T18:15:01.623Z",
+        "Unit": "KilometersPerHour",
+        "Value": 3.999950727259044,
+        "BaseUnit": "KilometersPerHour",
+        "BaseValue": 3.999950727259044
+      },
+      "LastTripId": "00000000-0000-0000-0000-000000000003",
+      "TowState": { "Timestamp": "2026-05-09T16:47:55.000Z", "Value": false },
+      "VIN": "WA1AAAAA0AA000001",
+      "VinDetails": {
+        "Timestamp": "2026-07-08T23:16:47.336Z",
+        "Vin": "WA1AAAAA0AA000001",
+        "DOVehicleId": "400894038",
+        "DOEngineId": "300001944",
+        "Year": 2017,
+        "Make": "Audi",
+        "Model": "Q7",
+        "Trim": "3.0T quattro Prestige",
+        "Engine": "3.0L Supercharged V6 333hp 325ft. lbs.",
+        "Cylinders": 6,
+        "FuelType": "Gasoline",
+        "CityFuelEfficiency": 19.0,
+        "HighwayFuelEfficiency": 25.0,
+        "CombinedFuelEfficiency": 21.0,
+        "Transmission": "8-Speed Shiftable Automatic",
+        "Success": true,
+        "DetectedImageUrl": "https://example.com/vehicle.png",
+        "DetectedImageColour": "000000"
+      },
+      "VirtualOdometer": {
+        "RolloverValue": 4294967295.0,
+        "Timestamp": "2026-07-24T18:15:00.000Z",
+        "Unit": "Meters",
+        "Value": 1216212.0,
+        "BaseUnit": "Meters",
+        "BaseValue": 1216212.0
+      },
+      "InitialOdometer": {
+        "RolloverValue": 0.0,
+        "Timestamp": "2026-07-08T23:36:09.654Z",
+        "Unit": "Meters",
+        "Value": 1094036.0,
+        "BaseUnit": "Meters",
+        "BaseValue": 1094036.0
+      },
+      "RealOdometer": {
+        "RolloverValue": 4294967295.0,
+        "Timestamp": "2026-06-14T00:31:08.000Z",
+        "Unit": "Meters",
+        "Value": 100737000.0,
+        "BaseUnit": "Meters",
+        "BaseValue": 100737000.0
+      },
+      "CompatDetails": { "Level": "Full", "LastChecked": "2026-07-20T13:07:38.795Z", "Changed": false },
+      "Location": {
+        "Lat": 0.0,
+        "Lng": 0.0,
+        "Status": "Locked",
+        "Altitude": 177.0,
+        "GeoHash": "s00000000000",
+        "Accuracy": {
+          "Timestamp": "2026-07-24T18:20:19.000Z",
+          "Unit": "Meters",
+          "Value": 18.2,
+          "BaseUnit": "Meters",
+          "BaseValue": 18.2
+        },
+        "Heading": {
+          "Timestamp": "2026-07-24T18:20:19.000Z",
+          "Unit": "Degree",
+          "Value": 144.0,
+          "BaseUnit": "Degree",
+          "BaseValue": 144.0
+        },
+        "Timestamp": "2026-07-24T18:20:19.000Z"
+      },
+      "Tags": [],
+      "EngineOil": {
+        "Timestamp": "2026-07-24T18:15:00.000Z",
+        "EngineOilTemperature": {
+          "Timestamp": "2026-07-24T18:15:00.000Z",
+          "Unit": "Celsius",
+          "Value": 0.0,
+          "BaseUnit": "Celsius",
+          "BaseValue": 0.0
+        }
+      },
+      "VehicleStatus": { "Timestamp": "2026-07-24T18:15:14.123Z", "Value": "Stopped" },
+      "Metadata": { "UserPermissions": ["all"], "RequestPermissions": ["full", "offline_access"] }
+    }
+  ],
+  "Results": 1
+}

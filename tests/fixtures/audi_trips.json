@@ -1,0 +1,30 @@
+{
+  "Data": [
+    {
+      "Id": "00000000-0000-0000-0000-000000000003",
+      "VehicleId": "00000000-0000-0000-0000-000000000001",
+      "MojioId": "00000000-0000-0000-0000-000000000002",
+      "Completed": true,
+      "StartTimestamp": "2026-07-24T18:12:19.000Z",
+      "EndTimestamp": "2026-07-24T18:15:09.000Z",
+      "Duration": "00:02:50.0000000",
+      "Distance": { "Unit": "Meters", "Value": 0.0, "BaseUnit": "Meters", "BaseValue": 0.0 },
+      "MaxSpeed": {
+        "Unit": "KilometersPerHour",
+        "Value": 36.964124564538935,
+        "BaseUnit": "KilometersPerHour",
+        "BaseValue": 36.964124564538935
+      },
+      "MaxRPM": {
+        "Unit": "RevolutionsPerMinute",
+        "Value": 2436.0,
+        "BaseUnit": "RevolutionsPerMinute",
+        "BaseValue": 2436.0
+      },
+      "FuelEfficiency": null,
+      "HarshAcclCount": null,
+      "Polyline": "_p~iF~ps|U_ulLnnqC_mqNvxq`@"
+    }
+  ],
+  "Results": 1
+}
