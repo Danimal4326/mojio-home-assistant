@@ -32,9 +32,9 @@ async def test_device_tracker_reports_position(hass: HomeAssistant):
     [
         ("sensor.audi_q7_fuel_level", "38.82"),
         ("sensor.audi_q7_battery_voltage", "12.2"),
-        # suggested_display_precision only rounds the display, not the state.
-        ("sensor.audi_q7_odometer", "100737000.0"),
-        ("sensor.audi_q7_distance_since_install", "1216212.0"),
+        # Reported in meters by the API, exposed in kilometers.
+        ("sensor.audi_q7_odometer", "100737.0"),
+        ("sensor.audi_q7_distance_since_install", "1216.212"),
         ("sensor.audi_q7_diagnostic_codes", "0"),
         ("sensor.audi_q7_vehicle_status", "Stopped"),
         ("sensor.audi_q7_engine_oil_temperature", "0.0"),

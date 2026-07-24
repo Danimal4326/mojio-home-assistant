@@ -2,13 +2,16 @@
 
 from __future__ import annotations
 
+from pathlib import Path
 from unittest.mock import patch
 
 import requests
+from PIL import Image
 
 from homeassistant.config_entries import ConfigEntryState
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import device_registry as dr
+from homeassistant.loader import async_get_integration
 
 from custom_components.mojio.const import DOMAIN
 
@@ -46,6 +49,23 @@ async def test_device_registered_with_vin(
     assert device.model == "Q7"
     assert device.hw_version == "2017"
     assert device.serial_number == "WA1AAAAA0AA000001"
+
+
+async def test_integration_serves_local_brand_images(hass: HomeAssistant):
+    """The bundled brand/ directory is what makes HA serve a local icon.
+
+    Home Assistant 2026.3+ serves custom-integration brand images from
+    <integration>/brand/ before falling back to the brands CDN, and gates that
+    on the directory existing. Without it the UI shows "logo not found".
+    """
+    integration = await async_get_integration(hass, DOMAIN)
+    assert integration.has_branding
+
+    icon = Path(integration.file_path) / "brand" / "icon.png"
+    assert icon.is_file()
+
+    with Image.open(icon) as image:
+        assert image.size == (256, 256)
 
 
 async def test_connection_error_sets_retry(

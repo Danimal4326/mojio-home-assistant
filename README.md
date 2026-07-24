@@ -60,6 +60,38 @@ The Audi tenant doesn't report everything the Mojio API defines:
 - **Tire pressure** is absent from the payload, so that binary sensor stays
   `unknown` unless your vehicle reports it.
 
+## Upgrading
+
+### Odometers showing feet instead of miles (fixed in 1.0.1)
+
+Versions before 1.0.1 exposed the odometers in meters. Home Assistant maps a
+metres-based distance sensor onto **feet** for US customary users, and only a
+kilometres-based one onto miles.
+
+Home Assistant pins a sensor's display unit in the entity registry the first
+time it is registered, so **updating alone does not fix an existing entity** -
+it will keep showing feet. For each affected entity (`Odometer` and
+`Distance since install`) either:
+
+- open the entity → gear icon → set **Unit of Measurement** to miles, or
+- delete the entity and reload the integration so it re-registers, or
+- remove and re-add the integration.
+
+New installs are unaffected.
+
+## Brand images
+
+Home Assistant 2026.3+ serves brand images for custom integrations from the
+integration's own `brand/` directory, falling back to the brands CDN only if
+that directory is absent. `custom_components/mojio/brand/icon.png` is therefore
+what stops the UI showing "logo not found" - no submission to the
+[home-assistant/brands](https://github.com/home-assistant/brands) repository is
+required.
+
+Home Assistant falls back from `logo.png`, `icon@2x.png` and the `dark_*`
+variants to `icon.png`, so the single icon covers every image the frontend asks
+for.
+
 ## Development
 
 The Mojio SDK is vendored under `custom_components/mojio/mojio_sdk/` rather than

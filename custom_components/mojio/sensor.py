@@ -40,6 +40,11 @@ def _raw_value(vehicle: Vehicle, key: str) -> float | None:
     return block.get("Value")
 
 
+def _meters_to_km(meters: float | None) -> float | None:
+    """Convert an odometer reading from meters to kilometers."""
+    return None if meters is None else meters / 1000
+
+
 def _duration_seconds(trip: Trip | None) -> float | None:
     """Convert a trip's HH:MM:SS duration into seconds."""
     if trip is None:
@@ -108,20 +113,25 @@ SENSORS: tuple[MojioSensorEntityDescription, ...] = (
         key="odometer",
         translation_key="odometer",
         device_class=SensorDeviceClass.DISTANCE,
-        native_unit_of_measurement=UnitOfLength.METERS,
+        # Reported in meters, but exposed in kilometers: Home Assistant maps a
+        # metres-based distance onto feet for US customary users, and only a
+        # kilometre-based one onto miles.
+        native_unit_of_measurement=UnitOfLength.KILOMETERS,
         state_class=SensorStateClass.TOTAL_INCREASING,
         suggested_display_precision=0,
-        value_fn=lambda vehicle, _trip: _raw_value(vehicle, "Odometer"),
+        value_fn=lambda vehicle, _trip: _meters_to_km(_raw_value(vehicle, "Odometer")),
     ),
     MojioSensorEntityDescription(
         key="virtual_odometer",
         translation_key="virtual_odometer",
         device_class=SensorDeviceClass.DISTANCE,
-        native_unit_of_measurement=UnitOfLength.METERS,
+        native_unit_of_measurement=UnitOfLength.KILOMETERS,
         state_class=SensorStateClass.TOTAL_INCREASING,
-        suggested_display_precision=0,
+        suggested_display_precision=1,
         entity_category=EntityCategory.DIAGNOSTIC,
-        value_fn=lambda vehicle, _trip: _raw_value(vehicle, "VirtualOdometer"),
+        value_fn=lambda vehicle, _trip: _meters_to_km(
+            _raw_value(vehicle, "VirtualOdometer")
+        ),
     ),
     MojioSensorEntityDescription(
         key="engine_oil_temperature",
